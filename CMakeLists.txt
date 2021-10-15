@@ -6,10 +6,11 @@ project(operatic VERSION 1.0)
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED true)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -pedantic -Wextra -Werror")
+# set(CMAKE_VERBOSE_MAKEFILE ON)
 
 # add opl3 library
 add_library(dbopl dbopl.cpp)
 
 # add the executable
 add_executable(operatic operatic.cpp)
-target_link_libraries(operatic PUBLIC dbopl pulse pulse-simple)
+target_link_libraries(operatic PUBLIC dbopl SDL2)
