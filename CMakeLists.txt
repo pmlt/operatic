@@ -13,4 +13,4 @@ add_library(dbopl dbopl.cpp)
 
 # add the executable
 add_executable(operatic operatic.cpp)
-target_link_libraries(operatic PUBLIC dbopl SDL2)
+target_link_libraries(operatic PUBLIC dbopl SDL2 SDL2_ttf)
